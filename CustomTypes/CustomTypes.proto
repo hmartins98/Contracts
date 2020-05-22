@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option go_package = "Contracts/CustomTypes";
+option go_package = "github.com/hmartins98/Contracts/CustomTypes";
 
 import "google/protobuf/timestamp.proto";
 
