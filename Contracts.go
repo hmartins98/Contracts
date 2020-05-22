@@ -1,1 +1,1 @@
-package Contracts
+package contracts
