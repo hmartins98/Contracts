@@ -1,10 +1,10 @@
 syntax = "proto3";
 
-option go_package = "github.com/hmartins98/Contracts/Auth";
+option go_package = "Contracts/Auth";
 
 package AuthPackage;
 
-import "github.com/hmartins98/Contracts/CustomTypes/CustomTypes.proto";
+import "Contracts/CustomTypes/CustomTypes.proto";
 
 service Authentication {
   rpc AuthenticateLogin (AuthenticationLoginRequest) returns (AuthenticationReply);

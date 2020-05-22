@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option go_package = "github.com/hmartins98/Contracts/Customer";
+option go_package = "Contracts/Customer";
 
 package CustomerPackage;
 
