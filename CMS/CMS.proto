@@ -52,8 +52,8 @@ message TextProperties {
 message ButtonProperties {
   ViewProperties view = 1;
   string text = 2;
-  int32 backgroundColor = 3;
-  int32 textColor = 4;
+  string backgroundColor = 3;
+  string textColor = 4;
   oneof action {
     ChangeActivityInteraction change_activity_interaction = 5;
     RecyclerViewInteraction recycler_view_interaction = 6;
@@ -72,4 +72,22 @@ message RecyclerViewInteraction{
 
 message SubmitInteraction{
   int32 formID = 1;
+}
+
+enum Gravity{
+  TOP = 0;
+}
+
+enum ScaleType{
+  CENTER_CROP = 0;
+}
+
+enum LinearLayout{
+  HORIZONTAL = 0;
+  VERTICAL = 1;
+}
+
+enum LayoutSize{
+  MATCH_PARENT = 0;
+  WRAP_CONTENT = 1;
 }

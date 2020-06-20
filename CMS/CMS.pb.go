@@ -31,6 +31,184 @@ const (
 // of the legacy proto package is being used.
 const _ = proto.ProtoPackageIsVersion4
 
+type Gravity int32
+
+const (
+	Gravity_TOP Gravity = 0
+)
+
+// Enum value maps for Gravity.
+var (
+	Gravity_name = map[int32]string{
+		0: "TOP",
+	}
+	Gravity_value = map[string]int32{
+		"TOP": 0,
+	}
+)
+
+func (x Gravity) Enum() *Gravity {
+	p := new(Gravity)
+	*p = x
+	return p
+}
+
+func (x Gravity) String() string {
+	return protoimpl.X.EnumStringOf(x.Descriptor(), protoreflect.EnumNumber(x))
+}
+
+func (Gravity) Descriptor() protoreflect.EnumDescriptor {
+	return file_github_com_hmartins98_Contracts_CMS_CMS_proto_enumTypes[0].Descriptor()
+}
+
+func (Gravity) Type() protoreflect.EnumType {
+	return &file_github_com_hmartins98_Contracts_CMS_CMS_proto_enumTypes[0]
+}
+
+func (x Gravity) Number() protoreflect.EnumNumber {
+	return protoreflect.EnumNumber(x)
+}
+
+// Deprecated: Use Gravity.Descriptor instead.
+func (Gravity) EnumDescriptor() ([]byte, []int) {
+	return file_github_com_hmartins98_Contracts_CMS_CMS_proto_rawDescGZIP(), []int{0}
+}
+
+type ScaleType int32
+
+const (
+	ScaleType_CENTER_CROP ScaleType = 0
+)
+
+// Enum value maps for ScaleType.
+var (
+	ScaleType_name = map[int32]string{
+		0: "CENTER_CROP",
+	}
+	ScaleType_value = map[string]int32{
+		"CENTER_CROP": 0,
+	}
+)
+
+func (x ScaleType) Enum() *ScaleType {
+	p := new(ScaleType)
+	*p = x
+	return p
+}
+
+func (x ScaleType) String() string {
+	return protoimpl.X.EnumStringOf(x.Descriptor(), protoreflect.EnumNumber(x))
+}
+
+func (ScaleType) Descriptor() protoreflect.EnumDescriptor {
+	return file_github_com_hmartins98_Contracts_CMS_CMS_proto_enumTypes[1].Descriptor()
+}
+
+func (ScaleType) Type() protoreflect.EnumType {
+	return &file_github_com_hmartins98_Contracts_CMS_CMS_proto_enumTypes[1]
+}
+
+func (x ScaleType) Number() protoreflect.EnumNumber {
+	return protoreflect.EnumNumber(x)
+}
+
+// Deprecated: Use ScaleType.Descriptor instead.
+func (ScaleType) EnumDescriptor() ([]byte, []int) {
+	return file_github_com_hmartins98_Contracts_CMS_CMS_proto_rawDescGZIP(), []int{1}
+}
+
+type LinearLayout int32
+
+const (
+	LinearLayout_HORIZONTAL LinearLayout = 0
+	LinearLayout_VERTICAL   LinearLayout = 1
+)
+
+// Enum value maps for LinearLayout.
+var (
+	LinearLayout_name = map[int32]string{
+		0: "HORIZONTAL",
+		1: "VERTICAL",
+	}
+	LinearLayout_value = map[string]int32{
+		"HORIZONTAL": 0,
+		"VERTICAL":   1,
+	}
+)
+
+func (x LinearLayout) Enum() *LinearLayout {
+	p := new(LinearLayout)
+	*p = x
+	return p
+}
+
+func (x LinearLayout) String() string {
+	return protoimpl.X.EnumStringOf(x.Descriptor(), protoreflect.EnumNumber(x))
+}
+
+func (LinearLayout) Descriptor() protoreflect.EnumDescriptor {
+	return file_github_com_hmartins98_Contracts_CMS_CMS_proto_enumTypes[2].Descriptor()
+}
+
+func (LinearLayout) Type() protoreflect.EnumType {
+	return &file_github_com_hmartins98_Contracts_CMS_CMS_proto_enumTypes[2]
+}
+
+func (x LinearLayout) Number() protoreflect.EnumNumber {
+	return protoreflect.EnumNumber(x)
+}
+
+// Deprecated: Use LinearLayout.Descriptor instead.
+func (LinearLayout) EnumDescriptor() ([]byte, []int) {
+	return file_github_com_hmartins98_Contracts_CMS_CMS_proto_rawDescGZIP(), []int{2}
+}
+
+type LayoutSize int32
+
+const (
+	LayoutSize_MATCH_PARENT LayoutSize = 0
+	LayoutSize_WRAP_CONTENT LayoutSize = 1
+)
+
+// Enum value maps for LayoutSize.
+var (
+	LayoutSize_name = map[int32]string{
+		0: "MATCH_PARENT",
+		1: "WRAP_CONTENT",
+	}
+	LayoutSize_value = map[string]int32{
+		"MATCH_PARENT": 0,
+		"WRAP_CONTENT": 1,
+	}
+)
+
+func (x LayoutSize) Enum() *LayoutSize {
+	p := new(LayoutSize)
+	*p = x
+	return p
+}
+
+func (x LayoutSize) String() string {
+	return protoimpl.X.EnumStringOf(x.Descriptor(), protoreflect.EnumNumber(x))
+}
+
+func (LayoutSize) Descriptor() protoreflect.EnumDescriptor {
+	return file_github_com_hmartins98_Contracts_CMS_CMS_proto_enumTypes[3].Descriptor()
+}
+
+func (LayoutSize) Type() protoreflect.EnumType {
+	return &file_github_com_hmartins98_Contracts_CMS_CMS_proto_enumTypes[3]
+}
+
+func (x LayoutSize) Number() protoreflect.EnumNumber {
+	return protoreflect.EnumNumber(x)
+}
+
+// Deprecated: Use LayoutSize.Descriptor instead.
+func (LayoutSize) EnumDescriptor() ([]byte, []int) {
+	return file_github_com_hmartins98_Contracts_CMS_CMS_proto_rawDescGZIP(), []int{3}
+}
+
 type ActivityRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -432,8 +610,8 @@ type ButtonProperties struct {
 
 	View            *ViewProperties `protobuf:"bytes,1,opt,name=view,proto3" json:"view,omitempty"`
 	Text            string          `protobuf:"bytes,2,opt,name=text,proto3" json:"text,omitempty"`
-	BackgroundColor int32           `protobuf:"varint,3,opt,name=backgroundColor,proto3" json:"backgroundColor,omitempty"`
-	TextColor       int32           `protobuf:"varint,4,opt,name=textColor,proto3" json:"textColor,omitempty"`
+	BackgroundColor string          `protobuf:"bytes,3,opt,name=backgroundColor,proto3" json:"backgroundColor,omitempty"`
+	TextColor       string          `protobuf:"bytes,4,opt,name=textColor,proto3" json:"textColor,omitempty"`
 	// Types that are assignable to Action:
 	//	*ButtonProperties_ChangeActivityInteraction
 	//	*ButtonProperties_RecyclerViewInteraction
@@ -487,18 +665,18 @@ func (x *ButtonProperties) GetText() string {
 	return ""
 }
 
-func (x *ButtonProperties) GetBackgroundColor() int32 {
+func (x *ButtonProperties) GetBackgroundColor() string {
 	if x != nil {
 		return x.BackgroundColor
 	}
-	return 0
+	return ""
 }
 
-func (x *ButtonProperties) GetTextColor() int32 {
+func (x *ButtonProperties) GetTextColor() string {
 	if x != nil {
 		return x.TextColor
 	}
-	return 0
+	return ""
 }
 
 func (m *ButtonProperties) GetAction() isButtonProperties_Action {
@@ -766,9 +944,9 @@ var file_github_com_hmartins98_Contracts_CMS_CMS_proto_rawDesc = []byte{
 	0x52, 0x04, 0x76, 0x69, 0x65, 0x77, 0x12, 0x12, 0x0a, 0x04, 0x74, 0x65, 0x78, 0x74, 0x18, 0x02,
 	0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x74, 0x65, 0x78, 0x74, 0x12, 0x28, 0x0a, 0x0f, 0x62, 0x61,
 	0x63, 0x6b, 0x67, 0x72, 0x6f, 0x75, 0x6e, 0x64, 0x43, 0x6f, 0x6c, 0x6f, 0x72, 0x18, 0x03, 0x20,
-	0x01, 0x28, 0x05, 0x52, 0x0f, 0x62, 0x61, 0x63, 0x6b, 0x67, 0x72, 0x6f, 0x75, 0x6e, 0x64, 0x43,
+	0x01, 0x28, 0x09, 0x52, 0x0f, 0x62, 0x61, 0x63, 0x6b, 0x67, 0x72, 0x6f, 0x75, 0x6e, 0x64, 0x43,
 	0x6f, 0x6c, 0x6f, 0x72, 0x12, 0x1c, 0x0a, 0x09, 0x74, 0x65, 0x78, 0x74, 0x43, 0x6f, 0x6c, 0x6f,
-	0x72, 0x18, 0x04, 0x20, 0x01, 0x28, 0x05, 0x52, 0x09, 0x74, 0x65, 0x78, 0x74, 0x43, 0x6f, 0x6c,
+	0x72, 0x18, 0x04, 0x20, 0x01, 0x28, 0x09, 0x52, 0x09, 0x74, 0x65, 0x78, 0x74, 0x43, 0x6f, 0x6c,
 	0x6f, 0x72, 0x12, 0x60, 0x0a, 0x1b, 0x63, 0x68, 0x61, 0x6e, 0x67, 0x65, 0x5f, 0x61, 0x63, 0x74,
 	0x69, 0x76, 0x69, 0x74, 0x79, 0x5f, 0x69, 0x6e, 0x74, 0x65, 0x72, 0x61, 0x63, 0x74, 0x69, 0x6f,
 	0x6e, 0x18, 0x05, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x1e, 0x2e, 0x43, 0x4d, 0x53, 0x2e, 0x43, 0x68,
@@ -798,14 +976,23 @@ var file_github_com_hmartins98_Contracts_CMS_CMS_proto_rawDesc = []byte{
 	0x6f, 0x18, 0x02, 0x20, 0x01, 0x28, 0x05, 0x52, 0x04, 0x67, 0x6f, 0x54, 0x6f, 0x22, 0x2b, 0x0a,
 	0x11, 0x53, 0x75, 0x62, 0x6d, 0x69, 0x74, 0x49, 0x6e, 0x74, 0x65, 0x72, 0x61, 0x63, 0x74, 0x69,
 	0x6f, 0x6e, 0x12, 0x16, 0x0a, 0x06, 0x66, 0x6f, 0x72, 0x6d, 0x49, 0x44, 0x18, 0x01, 0x20, 0x01,
-	0x28, 0x05, 0x52, 0x06, 0x66, 0x6f, 0x72, 0x6d, 0x49, 0x44, 0x32, 0x3e, 0x0a, 0x03, 0x43, 0x4d,
-	0x53, 0x12, 0x37, 0x0a, 0x0b, 0x47, 0x65, 0x74, 0x41, 0x63, 0x74, 0x69, 0x76, 0x69, 0x74, 0x79,
-	0x12, 0x14, 0x2e, 0x43, 0x4d, 0x53, 0x2e, 0x41, 0x63, 0x74, 0x69, 0x76, 0x69, 0x74, 0x79, 0x52,
-	0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x12, 0x2e, 0x43, 0x4d, 0x53, 0x2e, 0x41, 0x63, 0x74,
-	0x69, 0x76, 0x69, 0x74, 0x79, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x42, 0x25, 0x5a, 0x23, 0x67, 0x69,
-	0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x68, 0x6d, 0x61, 0x72, 0x74, 0x69, 0x6e,
-	0x73, 0x39, 0x38, 0x2f, 0x43, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x73, 0x2f, 0x43, 0x4d,
-	0x53, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x28, 0x05, 0x52, 0x06, 0x66, 0x6f, 0x72, 0x6d, 0x49, 0x44, 0x2a, 0x12, 0x0a, 0x07, 0x47, 0x72,
+	0x61, 0x76, 0x69, 0x74, 0x79, 0x12, 0x07, 0x0a, 0x03, 0x54, 0x4f, 0x50, 0x10, 0x00, 0x2a, 0x1c,
+	0x0a, 0x09, 0x53, 0x63, 0x61, 0x6c, 0x65, 0x54, 0x79, 0x70, 0x65, 0x12, 0x0f, 0x0a, 0x0b, 0x43,
+	0x45, 0x4e, 0x54, 0x45, 0x52, 0x5f, 0x43, 0x52, 0x4f, 0x50, 0x10, 0x00, 0x2a, 0x2c, 0x0a, 0x0c,
+	0x4c, 0x69, 0x6e, 0x65, 0x61, 0x72, 0x4c, 0x61, 0x79, 0x6f, 0x75, 0x74, 0x12, 0x0e, 0x0a, 0x0a,
+	0x48, 0x4f, 0x52, 0x49, 0x5a, 0x4f, 0x4e, 0x54, 0x41, 0x4c, 0x10, 0x00, 0x12, 0x0c, 0x0a, 0x08,
+	0x56, 0x45, 0x52, 0x54, 0x49, 0x43, 0x41, 0x4c, 0x10, 0x01, 0x2a, 0x30, 0x0a, 0x0a, 0x4c, 0x61,
+	0x79, 0x6f, 0x75, 0x74, 0x53, 0x69, 0x7a, 0x65, 0x12, 0x10, 0x0a, 0x0c, 0x4d, 0x41, 0x54, 0x43,
+	0x48, 0x5f, 0x50, 0x41, 0x52, 0x45, 0x4e, 0x54, 0x10, 0x00, 0x12, 0x10, 0x0a, 0x0c, 0x57, 0x52,
+	0x41, 0x50, 0x5f, 0x43, 0x4f, 0x4e, 0x54, 0x45, 0x4e, 0x54, 0x10, 0x01, 0x32, 0x3e, 0x0a, 0x03,
+	0x43, 0x4d, 0x53, 0x12, 0x37, 0x0a, 0x0b, 0x47, 0x65, 0x74, 0x41, 0x63, 0x74, 0x69, 0x76, 0x69,
+	0x74, 0x79, 0x12, 0x14, 0x2e, 0x43, 0x4d, 0x53, 0x2e, 0x41, 0x63, 0x74, 0x69, 0x76, 0x69, 0x74,
+	0x79, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x12, 0x2e, 0x43, 0x4d, 0x53, 0x2e, 0x41,
+	0x63, 0x74, 0x69, 0x76, 0x69, 0x74, 0x79, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x42, 0x25, 0x5a, 0x23,
+	0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x68, 0x6d, 0x61, 0x72, 0x74,
+	0x69, 0x6e, 0x73, 0x39, 0x38, 0x2f, 0x43, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x73, 0x2f,
+	0x43, 0x4d, 0x53, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -820,32 +1007,37 @@ func file_github_com_hmartins98_Contracts_CMS_CMS_proto_rawDescGZIP() []byte {
 	return file_github_com_hmartins98_Contracts_CMS_CMS_proto_rawDescData
 }
 
+var file_github_com_hmartins98_Contracts_CMS_CMS_proto_enumTypes = make([]protoimpl.EnumInfo, 4)
 var file_github_com_hmartins98_Contracts_CMS_CMS_proto_msgTypes = make([]protoimpl.MessageInfo, 10)
 var file_github_com_hmartins98_Contracts_CMS_CMS_proto_goTypes = []interface{}{
-	(*ActivityRequest)(nil),           // 0: CMS.ActivityRequest
-	(*ActivityReply)(nil),             // 1: CMS.ActivityReply
-	(*ViewProperties)(nil),            // 2: CMS.ViewProperties
-	(*LinearLayoutProperties)(nil),    // 3: CMS.LinearLayoutProperties
-	(*ImageProperties)(nil),           // 4: CMS.ImageProperties
-	(*TextProperties)(nil),            // 5: CMS.TextProperties
-	(*ButtonProperties)(nil),          // 6: CMS.ButtonProperties
-	(*ChangeActivityInteraction)(nil), // 7: CMS.ChangeActivityInteraction
-	(*RecyclerViewInteraction)(nil),   // 8: CMS.RecyclerViewInteraction
-	(*SubmitInteraction)(nil),         // 9: CMS.SubmitInteraction
-	(*any.Any)(nil),                   // 10: google.protobuf.Any
+	(Gravity)(0),                      // 0: CMS.Gravity
+	(ScaleType)(0),                    // 1: CMS.ScaleType
+	(LinearLayout)(0),                 // 2: CMS.LinearLayout
+	(LayoutSize)(0),                   // 3: CMS.LayoutSize
+	(*ActivityRequest)(nil),           // 4: CMS.ActivityRequest
+	(*ActivityReply)(nil),             // 5: CMS.ActivityReply
+	(*ViewProperties)(nil),            // 6: CMS.ViewProperties
+	(*LinearLayoutProperties)(nil),    // 7: CMS.LinearLayoutProperties
+	(*ImageProperties)(nil),           // 8: CMS.ImageProperties
+	(*TextProperties)(nil),            // 9: CMS.TextProperties
+	(*ButtonProperties)(nil),          // 10: CMS.ButtonProperties
+	(*ChangeActivityInteraction)(nil), // 11: CMS.ChangeActivityInteraction
+	(*RecyclerViewInteraction)(nil),   // 12: CMS.RecyclerViewInteraction
+	(*SubmitInteraction)(nil),         // 13: CMS.SubmitInteraction
+	(*any.Any)(nil),                   // 14: google.protobuf.Any
 }
 var file_github_com_hmartins98_Contracts_CMS_CMS_proto_depIdxs = []int32{
-	3,  // 0: CMS.ActivityReply.activity:type_name -> CMS.LinearLayoutProperties
-	2,  // 1: CMS.LinearLayoutProperties.view:type_name -> CMS.ViewProperties
-	10, // 2: CMS.LinearLayoutProperties.views:type_name -> google.protobuf.Any
-	2,  // 3: CMS.ImageProperties.view:type_name -> CMS.ViewProperties
-	2,  // 4: CMS.TextProperties.view:type_name -> CMS.ViewProperties
-	2,  // 5: CMS.ButtonProperties.view:type_name -> CMS.ViewProperties
-	7,  // 6: CMS.ButtonProperties.change_activity_interaction:type_name -> CMS.ChangeActivityInteraction
-	8,  // 7: CMS.ButtonProperties.recycler_view_interaction:type_name -> CMS.RecyclerViewInteraction
-	9,  // 8: CMS.ButtonProperties.submit_interaction:type_name -> CMS.SubmitInteraction
-	0,  // 9: CMS.CMS.GetActivity:input_type -> CMS.ActivityRequest
-	1,  // 10: CMS.CMS.GetActivity:output_type -> CMS.ActivityReply
+	7,  // 0: CMS.ActivityReply.activity:type_name -> CMS.LinearLayoutProperties
+	6,  // 1: CMS.LinearLayoutProperties.view:type_name -> CMS.ViewProperties
+	14, // 2: CMS.LinearLayoutProperties.views:type_name -> google.protobuf.Any
+	6,  // 3: CMS.ImageProperties.view:type_name -> CMS.ViewProperties
+	6,  // 4: CMS.TextProperties.view:type_name -> CMS.ViewProperties
+	6,  // 5: CMS.ButtonProperties.view:type_name -> CMS.ViewProperties
+	11, // 6: CMS.ButtonProperties.change_activity_interaction:type_name -> CMS.ChangeActivityInteraction
+	12, // 7: CMS.ButtonProperties.recycler_view_interaction:type_name -> CMS.RecyclerViewInteraction
+	13, // 8: CMS.ButtonProperties.submit_interaction:type_name -> CMS.SubmitInteraction
+	4,  // 9: CMS.CMS.GetActivity:input_type -> CMS.ActivityRequest
+	5,  // 10: CMS.CMS.GetActivity:output_type -> CMS.ActivityReply
 	10, // [10:11] is the sub-list for method output_type
 	9,  // [9:10] is the sub-list for method input_type
 	9,  // [9:9] is the sub-list for extension type_name
@@ -990,13 +1182,14 @@ func file_github_com_hmartins98_Contracts_CMS_CMS_proto_init() {
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_github_com_hmartins98_Contracts_CMS_CMS_proto_rawDesc,
-			NumEnums:      0,
+			NumEnums:      4,
 			NumMessages:   10,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
 		GoTypes:           file_github_com_hmartins98_Contracts_CMS_CMS_proto_goTypes,
 		DependencyIndexes: file_github_com_hmartins98_Contracts_CMS_CMS_proto_depIdxs,
+		EnumInfos:         file_github_com_hmartins98_Contracts_CMS_CMS_proto_enumTypes,
 		MessageInfos:      file_github_com_hmartins98_Contracts_CMS_CMS_proto_msgTypes,
 	}.Build()
 	File_github_com_hmartins98_Contracts_CMS_CMS_proto = out.File
