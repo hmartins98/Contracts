@@ -2,12 +2,12 @@ syntax = "proto3";
 
 option go_package = "github.com/hmartins98/Contracts/CMS";
 
-package AuthPackage;
+package CMS;
 
 import "github.com/hmartins98/Contracts/CustomTypes/CustomTypes.proto";
 import "google/protobuf/any.proto";
 
-service Authentication {
+service CMS {
   rpc GetActivity (ActivityRequest) returns (ActivityReply);
 }
 
