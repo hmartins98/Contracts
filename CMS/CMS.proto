@@ -4,7 +4,6 @@ option go_package = "github.com/hmartins98/Contracts/CMS";
 
 package CMS;
 
-import "github.com/hmartins98/Contracts/CustomTypes/CustomTypes.proto";
 import "google/protobuf/any.proto";
 
 service CMS {
@@ -21,27 +20,33 @@ message ActivityReply{
 
 message ViewProperties{
   int32 ID  = 1;
-  int32 gravity = 2;
-  int32 height = 3;
-  int32 width = 4;
-  int32 marginStart = 5;
-  int32 marginEnd = 6;
-  int32 marginLeft = 7;
-  int32 marginTop = 8;
-  int32 marginRight = 9;
-  int32 marginBottom = 10;
+  Gravity gravity = 2;
+  oneof height{
+    LayoutSize layout_height_size = 3;
+    int32 height_value = 4;
+  }
+  oneof width{
+    LayoutSize layout_width_size = 5;
+    int32 width_value = 6;
+  }
+  int32 margin_start = 7;
+  int32 margin_end = 8;
+  int32 margin_left = 9;
+  int32 margin_top = 10;
+  int32 margin_right = 11;
+  int32 margin_bottom = 12;
 }
 
 message LinearLayoutProperties{
   ViewProperties view = 1;
-  int32 orientation = 2;
+  Orientation orientation = 2;
   repeated google.protobuf.Any views = 3;
 }
 
 message ImageProperties {
   ViewProperties view = 1;
   string uri = 2;
-  int32 scaleType = 3;
+  ScaleType scale_type = 3;
 }
 
 message TextProperties {
@@ -52,7 +57,7 @@ message TextProperties {
 message ButtonProperties {
   ViewProperties view = 1;
   string text = 2;
-  string backgroundColor = 3;
+  string background_color = 3;
   string textColor = 4;
   oneof action {
     ChangeActivityInteraction change_activity_interaction = 5;
@@ -62,16 +67,16 @@ message ButtonProperties {
 }
 
 message ChangeActivityInteraction{
-  int32 nextActivityID = 1;
+  int32 next_activity_id = 1;
 }
 
 message RecyclerViewInteraction{
-  int32 recycleViewID = 1;
-  int32 goTo = 2;
+  int32 recycle_view_id = 1;
+  int32 go_to = 2;
 }
 
 message SubmitInteraction{
-  int32 formID = 1;
+  int32 form_id = 1;
 }
 
 enum Gravity{
@@ -82,7 +87,7 @@ enum ScaleType{
   CENTER_CROP = 0;
 }
 
-enum LinearLayout{
+enum Orientation{
   HORIZONTAL = 0;
   VERTICAL = 1;
 }
