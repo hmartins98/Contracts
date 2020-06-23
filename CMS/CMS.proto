@@ -23,14 +23,10 @@ message ViewProperties{
   int32 parent_id  = 1;
   int32 id  = 2;
   Gravity gravity = 3;
-  oneof height{
-    LayoutSize layout_height_size = 4;
-    int32 height_value = 5;
-  }
-  oneof width{
-    LayoutSize layout_width_size = 6;
-    int32 width_value = 7;
-  }
+  LayoutSize layout_height_type = 4;
+  int32 height_value = 5;
+  LayoutSize layout_width_type = 6;
+  int32 width_value = 7;
   int32 margin_start = 8;
   int32 margin_end = 9;
   int32 margin_left = 10;
@@ -61,11 +57,16 @@ message ButtonProperties {
   string text = 2;
   string background_color = 3;
   string textColor = 4;
-  oneof action {
-    ChangeActivityInteraction change_activity_interaction = 5;
-    RecyclerViewInteraction recycler_view_interaction = 6;
-    SubmitInteraction submit_interaction = 7;
-  }
+  InteractionType interaction_type = 5;
+  ChangeActivityInteraction change_activity_interaction = 6;
+  RecyclerViewInteraction recycler_view_interaction = 7;
+  SubmitInteraction submit_interaction = 8;
+}
+
+enum InteractionType{
+  CHANGE_ACTIVITY = 0;
+  RECYCLER_VIEW = 1;
+  SUBMIT = 2;
 }
 
 message ChangeActivityInteraction{
