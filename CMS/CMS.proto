@@ -8,7 +8,7 @@ package CMS;
 import "google/protobuf/any.proto";
 
 service CMS {
-  rpc GetActivity (stream ActivityRequest) returns (stream ActivityReply);
+  rpc GetActivity (ActivityRequest) returns (stream ActivityReply);
 }
 
 message ActivityRequest{
@@ -42,7 +42,6 @@ message ViewProperties{
 message LinearLayoutProperties{
   ViewProperties view = 1;
   Orientation orientation = 2;
-  repeated int32 child_views_id = 3;
 }
 
 message ImageProperties {
