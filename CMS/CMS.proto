@@ -1,6 +1,7 @@
 syntax = "proto3";
 
 option go_package = "github.com/hmartins98/Contracts/CMS";
+option java_outer_classname = "AndroidCMS";
 
 package CMS;
 
@@ -68,6 +69,7 @@ message ButtonProperties {
 
 message ChangeActivityInteraction{
   int32 next_activity_id = 1;
+  bool invalidate_cache = 2;
 }
 
 message RecyclerViewInteraction{
