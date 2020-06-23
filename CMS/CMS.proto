@@ -37,6 +37,7 @@ message ViewProperties{
   int32 margin_top = 11;
   int32 margin_right = 12;
   int32 margin_bottom = 13;
+  int32 order = 14;
 }
 
 message LinearLayoutProperties{
