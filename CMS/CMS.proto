@@ -8,7 +8,7 @@ package CMS;
 import "google/protobuf/any.proto";
 
 service CMS {
-  rpc GetActivity (ActivityRequest) returns (stream ActivityReply);
+  rpc GetActivity (ActivityRequest) returns (ActivityReply);
 }
 
 message ActivityRequest{
@@ -16,7 +16,7 @@ message ActivityRequest{
 }
 
 message ActivityReply{
-  google.protobuf.Any activity = 1;
+  repeated google.protobuf.Any activity = 1;
 }
 
 message ViewProperties{
