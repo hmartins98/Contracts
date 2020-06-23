@@ -100,4 +100,5 @@ enum Orientation{
 enum LayoutSize{
   MATCH_PARENT = 0;
   WRAP_CONTENT = 1;
+  VALUE = 2;
 }
