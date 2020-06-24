@@ -79,6 +79,52 @@ func (InteractionType) EnumDescriptor() ([]byte, []int) {
 	return file_github_com_hmartins98_Contracts_CMS_CMS_proto_rawDescGZIP(), []int{0}
 }
 
+type InputTextType int32
+
+const (
+	InputTextType_EMAIL    InputTextType = 0
+	InputTextType_PASSWORD InputTextType = 1
+)
+
+// Enum value maps for InputTextType.
+var (
+	InputTextType_name = map[int32]string{
+		0: "EMAIL",
+		1: "PASSWORD",
+	}
+	InputTextType_value = map[string]int32{
+		"EMAIL":    0,
+		"PASSWORD": 1,
+	}
+)
+
+func (x InputTextType) Enum() *InputTextType {
+	p := new(InputTextType)
+	*p = x
+	return p
+}
+
+func (x InputTextType) String() string {
+	return protoimpl.X.EnumStringOf(x.Descriptor(), protoreflect.EnumNumber(x))
+}
+
+func (InputTextType) Descriptor() protoreflect.EnumDescriptor {
+	return file_github_com_hmartins98_Contracts_CMS_CMS_proto_enumTypes[1].Descriptor()
+}
+
+func (InputTextType) Type() protoreflect.EnumType {
+	return &file_github_com_hmartins98_Contracts_CMS_CMS_proto_enumTypes[1]
+}
+
+func (x InputTextType) Number() protoreflect.EnumNumber {
+	return protoreflect.EnumNumber(x)
+}
+
+// Deprecated: Use InputTextType.Descriptor instead.
+func (InputTextType) EnumDescriptor() ([]byte, []int) {
+	return file_github_com_hmartins98_Contracts_CMS_CMS_proto_rawDescGZIP(), []int{1}
+}
+
 type Gravity int32
 
 const (
@@ -106,11 +152,11 @@ func (x Gravity) String() string {
 }
 
 func (Gravity) Descriptor() protoreflect.EnumDescriptor {
-	return file_github_com_hmartins98_Contracts_CMS_CMS_proto_enumTypes[1].Descriptor()
+	return file_github_com_hmartins98_Contracts_CMS_CMS_proto_enumTypes[2].Descriptor()
 }
 
 func (Gravity) Type() protoreflect.EnumType {
-	return &file_github_com_hmartins98_Contracts_CMS_CMS_proto_enumTypes[1]
+	return &file_github_com_hmartins98_Contracts_CMS_CMS_proto_enumTypes[2]
 }
 
 func (x Gravity) Number() protoreflect.EnumNumber {
@@ -119,7 +165,7 @@ func (x Gravity) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use Gravity.Descriptor instead.
 func (Gravity) EnumDescriptor() ([]byte, []int) {
-	return file_github_com_hmartins98_Contracts_CMS_CMS_proto_rawDescGZIP(), []int{1}
+	return file_github_com_hmartins98_Contracts_CMS_CMS_proto_rawDescGZIP(), []int{2}
 }
 
 type ScaleType int32
@@ -149,11 +195,11 @@ func (x ScaleType) String() string {
 }
 
 func (ScaleType) Descriptor() protoreflect.EnumDescriptor {
-	return file_github_com_hmartins98_Contracts_CMS_CMS_proto_enumTypes[2].Descriptor()
+	return file_github_com_hmartins98_Contracts_CMS_CMS_proto_enumTypes[3].Descriptor()
 }
 
 func (ScaleType) Type() protoreflect.EnumType {
-	return &file_github_com_hmartins98_Contracts_CMS_CMS_proto_enumTypes[2]
+	return &file_github_com_hmartins98_Contracts_CMS_CMS_proto_enumTypes[3]
 }
 
 func (x ScaleType) Number() protoreflect.EnumNumber {
@@ -162,7 +208,7 @@ func (x ScaleType) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use ScaleType.Descriptor instead.
 func (ScaleType) EnumDescriptor() ([]byte, []int) {
-	return file_github_com_hmartins98_Contracts_CMS_CMS_proto_rawDescGZIP(), []int{2}
+	return file_github_com_hmartins98_Contracts_CMS_CMS_proto_rawDescGZIP(), []int{3}
 }
 
 type Orientation int32
@@ -195,11 +241,11 @@ func (x Orientation) String() string {
 }
 
 func (Orientation) Descriptor() protoreflect.EnumDescriptor {
-	return file_github_com_hmartins98_Contracts_CMS_CMS_proto_enumTypes[3].Descriptor()
+	return file_github_com_hmartins98_Contracts_CMS_CMS_proto_enumTypes[4].Descriptor()
 }
 
 func (Orientation) Type() protoreflect.EnumType {
-	return &file_github_com_hmartins98_Contracts_CMS_CMS_proto_enumTypes[3]
+	return &file_github_com_hmartins98_Contracts_CMS_CMS_proto_enumTypes[4]
 }
 
 func (x Orientation) Number() protoreflect.EnumNumber {
@@ -208,7 +254,7 @@ func (x Orientation) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use Orientation.Descriptor instead.
 func (Orientation) EnumDescriptor() ([]byte, []int) {
-	return file_github_com_hmartins98_Contracts_CMS_CMS_proto_rawDescGZIP(), []int{3}
+	return file_github_com_hmartins98_Contracts_CMS_CMS_proto_rawDescGZIP(), []int{4}
 }
 
 type LayoutSize int32
@@ -245,11 +291,11 @@ func (x LayoutSize) String() string {
 }
 
 func (LayoutSize) Descriptor() protoreflect.EnumDescriptor {
-	return file_github_com_hmartins98_Contracts_CMS_CMS_proto_enumTypes[4].Descriptor()
+	return file_github_com_hmartins98_Contracts_CMS_CMS_proto_enumTypes[5].Descriptor()
 }
 
 func (LayoutSize) Type() protoreflect.EnumType {
-	return &file_github_com_hmartins98_Contracts_CMS_CMS_proto_enumTypes[4]
+	return &file_github_com_hmartins98_Contracts_CMS_CMS_proto_enumTypes[5]
 }
 
 func (x LayoutSize) Number() protoreflect.EnumNumber {
@@ -258,7 +304,7 @@ func (x LayoutSize) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use LayoutSize.Descriptor instead.
 func (LayoutSize) EnumDescriptor() ([]byte, []int) {
-	return file_github_com_hmartins98_Contracts_CMS_CMS_proto_rawDescGZIP(), []int{4}
+	return file_github_com_hmartins98_Contracts_CMS_CMS_proto_rawDescGZIP(), []int{5}
 }
 
 type ActivityRequest struct {
@@ -947,6 +993,140 @@ func (x *SubmitInteraction) GetFormId() int32 {
 	return 0
 }
 
+type RecyclerViewProperties struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	View         *ViewProperties `protobuf:"bytes,1,opt,name=view,proto3" json:"view,omitempty"`
+	HasFixedSize bool            `protobuf:"varint,2,opt,name=hasFixedSize,proto3" json:"hasFixedSize,omitempty"`
+	Orientation  Orientation     `protobuf:"varint,3,opt,name=orientation,proto3,enum=CMS.Orientation" json:"orientation,omitempty"`
+}
+
+func (x *RecyclerViewProperties) Reset() {
+	*x = RecyclerViewProperties{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_github_com_hmartins98_Contracts_CMS_CMS_proto_msgTypes[10]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *RecyclerViewProperties) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*RecyclerViewProperties) ProtoMessage() {}
+
+func (x *RecyclerViewProperties) ProtoReflect() protoreflect.Message {
+	mi := &file_github_com_hmartins98_Contracts_CMS_CMS_proto_msgTypes[10]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use RecyclerViewProperties.ProtoReflect.Descriptor instead.
+func (*RecyclerViewProperties) Descriptor() ([]byte, []int) {
+	return file_github_com_hmartins98_Contracts_CMS_CMS_proto_rawDescGZIP(), []int{10}
+}
+
+func (x *RecyclerViewProperties) GetView() *ViewProperties {
+	if x != nil {
+		return x.View
+	}
+	return nil
+}
+
+func (x *RecyclerViewProperties) GetHasFixedSize() bool {
+	if x != nil {
+		return x.HasFixedSize
+	}
+	return false
+}
+
+func (x *RecyclerViewProperties) GetOrientation() Orientation {
+	if x != nil {
+		return x.Orientation
+	}
+	return Orientation_HORIZONTAL
+}
+
+type TextInputProperties struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	View      *ViewProperties `protobuf:"bytes,1,opt,name=view,proto3" json:"view,omitempty"`
+	TextHint  string          `protobuf:"bytes,2,opt,name=textHint,proto3" json:"textHint,omitempty"`
+	TextSize  float32         `protobuf:"fixed32,3,opt,name=textSize,proto3" json:"textSize,omitempty"`
+	InputType InputTextType   `protobuf:"varint,4,opt,name=inputType,proto3,enum=CMS.InputTextType" json:"inputType,omitempty"`
+}
+
+func (x *TextInputProperties) Reset() {
+	*x = TextInputProperties{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_github_com_hmartins98_Contracts_CMS_CMS_proto_msgTypes[11]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *TextInputProperties) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*TextInputProperties) ProtoMessage() {}
+
+func (x *TextInputProperties) ProtoReflect() protoreflect.Message {
+	mi := &file_github_com_hmartins98_Contracts_CMS_CMS_proto_msgTypes[11]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use TextInputProperties.ProtoReflect.Descriptor instead.
+func (*TextInputProperties) Descriptor() ([]byte, []int) {
+	return file_github_com_hmartins98_Contracts_CMS_CMS_proto_rawDescGZIP(), []int{11}
+}
+
+func (x *TextInputProperties) GetView() *ViewProperties {
+	if x != nil {
+		return x.View
+	}
+	return nil
+}
+
+func (x *TextInputProperties) GetTextHint() string {
+	if x != nil {
+		return x.TextHint
+	}
+	return ""
+}
+
+func (x *TextInputProperties) GetTextSize() float32 {
+	if x != nil {
+		return x.TextSize
+	}
+	return 0
+}
+
+func (x *TextInputProperties) GetInputType() InputTextType {
+	if x != nil {
+		return x.InputType
+	}
+	return InputTextType_EMAIL
+}
+
 var File_github_com_hmartins98_Contracts_CMS_CMS_proto protoreflect.FileDescriptor
 
 var file_github_com_hmartins98_Contracts_CMS_CMS_proto_rawDesc = []byte{
@@ -1063,29 +1243,53 @@ var file_github_com_hmartins98_Contracts_CMS_CMS_proto_rawDesc = []byte{
 	0x04, 0x67, 0x6f, 0x54, 0x6f, 0x22, 0x2c, 0x0a, 0x11, 0x53, 0x75, 0x62, 0x6d, 0x69, 0x74, 0x49,
 	0x6e, 0x74, 0x65, 0x72, 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x12, 0x17, 0x0a, 0x07, 0x66, 0x6f,
 	0x72, 0x6d, 0x5f, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x05, 0x52, 0x06, 0x66, 0x6f, 0x72,
-	0x6d, 0x49, 0x64, 0x2a, 0x45, 0x0a, 0x0f, 0x49, 0x6e, 0x74, 0x65, 0x72, 0x61, 0x63, 0x74, 0x69,
-	0x6f, 0x6e, 0x54, 0x79, 0x70, 0x65, 0x12, 0x13, 0x0a, 0x0f, 0x43, 0x48, 0x41, 0x4e, 0x47, 0x45,
-	0x5f, 0x41, 0x43, 0x54, 0x49, 0x56, 0x49, 0x54, 0x59, 0x10, 0x00, 0x12, 0x11, 0x0a, 0x0d, 0x52,
-	0x45, 0x43, 0x59, 0x43, 0x4c, 0x45, 0x52, 0x5f, 0x56, 0x49, 0x45, 0x57, 0x10, 0x01, 0x12, 0x0a,
-	0x0a, 0x06, 0x53, 0x55, 0x42, 0x4d, 0x49, 0x54, 0x10, 0x02, 0x2a, 0x12, 0x0a, 0x07, 0x47, 0x72,
-	0x61, 0x76, 0x69, 0x74, 0x79, 0x12, 0x07, 0x0a, 0x03, 0x54, 0x4f, 0x50, 0x10, 0x00, 0x2a, 0x1c,
-	0x0a, 0x09, 0x53, 0x63, 0x61, 0x6c, 0x65, 0x54, 0x79, 0x70, 0x65, 0x12, 0x0f, 0x0a, 0x0b, 0x43,
-	0x45, 0x4e, 0x54, 0x45, 0x52, 0x5f, 0x43, 0x52, 0x4f, 0x50, 0x10, 0x00, 0x2a, 0x2b, 0x0a, 0x0b,
-	0x4f, 0x72, 0x69, 0x65, 0x6e, 0x74, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x12, 0x0e, 0x0a, 0x0a, 0x48,
-	0x4f, 0x52, 0x49, 0x5a, 0x4f, 0x4e, 0x54, 0x41, 0x4c, 0x10, 0x00, 0x12, 0x0c, 0x0a, 0x08, 0x56,
-	0x45, 0x52, 0x54, 0x49, 0x43, 0x41, 0x4c, 0x10, 0x01, 0x2a, 0x3b, 0x0a, 0x0a, 0x4c, 0x61, 0x79,
-	0x6f, 0x75, 0x74, 0x53, 0x69, 0x7a, 0x65, 0x12, 0x09, 0x0a, 0x05, 0x56, 0x41, 0x4c, 0x55, 0x45,
-	0x10, 0x00, 0x12, 0x10, 0x0a, 0x0c, 0x4d, 0x41, 0x54, 0x43, 0x48, 0x5f, 0x50, 0x41, 0x52, 0x45,
-	0x4e, 0x54, 0x10, 0x01, 0x12, 0x10, 0x0a, 0x0c, 0x57, 0x52, 0x41, 0x50, 0x5f, 0x43, 0x4f, 0x4e,
-	0x54, 0x45, 0x4e, 0x54, 0x10, 0x02, 0x32, 0x3e, 0x0a, 0x03, 0x43, 0x4d, 0x53, 0x12, 0x37, 0x0a,
-	0x0b, 0x47, 0x65, 0x74, 0x41, 0x63, 0x74, 0x69, 0x76, 0x69, 0x74, 0x79, 0x12, 0x14, 0x2e, 0x43,
-	0x4d, 0x53, 0x2e, 0x41, 0x63, 0x74, 0x69, 0x76, 0x69, 0x74, 0x79, 0x52, 0x65, 0x71, 0x75, 0x65,
-	0x73, 0x74, 0x1a, 0x12, 0x2e, 0x43, 0x4d, 0x53, 0x2e, 0x41, 0x63, 0x74, 0x69, 0x76, 0x69, 0x74,
-	0x79, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x42, 0x31, 0x42, 0x0a, 0x41, 0x6e, 0x64, 0x72, 0x6f, 0x69,
-	0x64, 0x43, 0x4d, 0x53, 0x5a, 0x23, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d,
-	0x2f, 0x68, 0x6d, 0x61, 0x72, 0x74, 0x69, 0x6e, 0x73, 0x39, 0x38, 0x2f, 0x43, 0x6f, 0x6e, 0x74,
-	0x72, 0x61, 0x63, 0x74, 0x73, 0x2f, 0x43, 0x4d, 0x53, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f,
-	0x33,
+	0x6d, 0x49, 0x64, 0x22, 0x99, 0x01, 0x0a, 0x16, 0x52, 0x65, 0x63, 0x79, 0x63, 0x6c, 0x65, 0x72,
+	0x56, 0x69, 0x65, 0x77, 0x50, 0x72, 0x6f, 0x70, 0x65, 0x72, 0x74, 0x69, 0x65, 0x73, 0x12, 0x27,
+	0x0a, 0x04, 0x76, 0x69, 0x65, 0x77, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x13, 0x2e, 0x43,
+	0x4d, 0x53, 0x2e, 0x56, 0x69, 0x65, 0x77, 0x50, 0x72, 0x6f, 0x70, 0x65, 0x72, 0x74, 0x69, 0x65,
+	0x73, 0x52, 0x04, 0x76, 0x69, 0x65, 0x77, 0x12, 0x22, 0x0a, 0x0c, 0x68, 0x61, 0x73, 0x46, 0x69,
+	0x78, 0x65, 0x64, 0x53, 0x69, 0x7a, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x08, 0x52, 0x0c, 0x68,
+	0x61, 0x73, 0x46, 0x69, 0x78, 0x65, 0x64, 0x53, 0x69, 0x7a, 0x65, 0x12, 0x32, 0x0a, 0x0b, 0x6f,
+	0x72, 0x69, 0x65, 0x6e, 0x74, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x18, 0x03, 0x20, 0x01, 0x28, 0x0e,
+	0x32, 0x10, 0x2e, 0x43, 0x4d, 0x53, 0x2e, 0x4f, 0x72, 0x69, 0x65, 0x6e, 0x74, 0x61, 0x74, 0x69,
+	0x6f, 0x6e, 0x52, 0x0b, 0x6f, 0x72, 0x69, 0x65, 0x6e, 0x74, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x22,
+	0xa8, 0x01, 0x0a, 0x13, 0x54, 0x65, 0x78, 0x74, 0x49, 0x6e, 0x70, 0x75, 0x74, 0x50, 0x72, 0x6f,
+	0x70, 0x65, 0x72, 0x74, 0x69, 0x65, 0x73, 0x12, 0x27, 0x0a, 0x04, 0x76, 0x69, 0x65, 0x77, 0x18,
+	0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x13, 0x2e, 0x43, 0x4d, 0x53, 0x2e, 0x56, 0x69, 0x65, 0x77,
+	0x50, 0x72, 0x6f, 0x70, 0x65, 0x72, 0x74, 0x69, 0x65, 0x73, 0x52, 0x04, 0x76, 0x69, 0x65, 0x77,
+	0x12, 0x1a, 0x0a, 0x08, 0x74, 0x65, 0x78, 0x74, 0x48, 0x69, 0x6e, 0x74, 0x18, 0x02, 0x20, 0x01,
+	0x28, 0x09, 0x52, 0x08, 0x74, 0x65, 0x78, 0x74, 0x48, 0x69, 0x6e, 0x74, 0x12, 0x1a, 0x0a, 0x08,
+	0x74, 0x65, 0x78, 0x74, 0x53, 0x69, 0x7a, 0x65, 0x18, 0x03, 0x20, 0x01, 0x28, 0x02, 0x52, 0x08,
+	0x74, 0x65, 0x78, 0x74, 0x53, 0x69, 0x7a, 0x65, 0x12, 0x30, 0x0a, 0x09, 0x69, 0x6e, 0x70, 0x75,
+	0x74, 0x54, 0x79, 0x70, 0x65, 0x18, 0x04, 0x20, 0x01, 0x28, 0x0e, 0x32, 0x12, 0x2e, 0x43, 0x4d,
+	0x53, 0x2e, 0x49, 0x6e, 0x70, 0x75, 0x74, 0x54, 0x65, 0x78, 0x74, 0x54, 0x79, 0x70, 0x65, 0x52,
+	0x09, 0x69, 0x6e, 0x70, 0x75, 0x74, 0x54, 0x79, 0x70, 0x65, 0x2a, 0x45, 0x0a, 0x0f, 0x49, 0x6e,
+	0x74, 0x65, 0x72, 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x54, 0x79, 0x70, 0x65, 0x12, 0x13, 0x0a,
+	0x0f, 0x43, 0x48, 0x41, 0x4e, 0x47, 0x45, 0x5f, 0x41, 0x43, 0x54, 0x49, 0x56, 0x49, 0x54, 0x59,
+	0x10, 0x00, 0x12, 0x11, 0x0a, 0x0d, 0x52, 0x45, 0x43, 0x59, 0x43, 0x4c, 0x45, 0x52, 0x5f, 0x56,
+	0x49, 0x45, 0x57, 0x10, 0x01, 0x12, 0x0a, 0x0a, 0x06, 0x53, 0x55, 0x42, 0x4d, 0x49, 0x54, 0x10,
+	0x02, 0x2a, 0x28, 0x0a, 0x0d, 0x49, 0x6e, 0x70, 0x75, 0x74, 0x54, 0x65, 0x78, 0x74, 0x54, 0x79,
+	0x70, 0x65, 0x12, 0x09, 0x0a, 0x05, 0x45, 0x4d, 0x41, 0x49, 0x4c, 0x10, 0x00, 0x12, 0x0c, 0x0a,
+	0x08, 0x50, 0x41, 0x53, 0x53, 0x57, 0x4f, 0x52, 0x44, 0x10, 0x01, 0x2a, 0x12, 0x0a, 0x07, 0x47,
+	0x72, 0x61, 0x76, 0x69, 0x74, 0x79, 0x12, 0x07, 0x0a, 0x03, 0x54, 0x4f, 0x50, 0x10, 0x00, 0x2a,
+	0x1c, 0x0a, 0x09, 0x53, 0x63, 0x61, 0x6c, 0x65, 0x54, 0x79, 0x70, 0x65, 0x12, 0x0f, 0x0a, 0x0b,
+	0x43, 0x45, 0x4e, 0x54, 0x45, 0x52, 0x5f, 0x43, 0x52, 0x4f, 0x50, 0x10, 0x00, 0x2a, 0x2b, 0x0a,
+	0x0b, 0x4f, 0x72, 0x69, 0x65, 0x6e, 0x74, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x12, 0x0e, 0x0a, 0x0a,
+	0x48, 0x4f, 0x52, 0x49, 0x5a, 0x4f, 0x4e, 0x54, 0x41, 0x4c, 0x10, 0x00, 0x12, 0x0c, 0x0a, 0x08,
+	0x56, 0x45, 0x52, 0x54, 0x49, 0x43, 0x41, 0x4c, 0x10, 0x01, 0x2a, 0x3b, 0x0a, 0x0a, 0x4c, 0x61,
+	0x79, 0x6f, 0x75, 0x74, 0x53, 0x69, 0x7a, 0x65, 0x12, 0x09, 0x0a, 0x05, 0x56, 0x41, 0x4c, 0x55,
+	0x45, 0x10, 0x00, 0x12, 0x10, 0x0a, 0x0c, 0x4d, 0x41, 0x54, 0x43, 0x48, 0x5f, 0x50, 0x41, 0x52,
+	0x45, 0x4e, 0x54, 0x10, 0x01, 0x12, 0x10, 0x0a, 0x0c, 0x57, 0x52, 0x41, 0x50, 0x5f, 0x43, 0x4f,
+	0x4e, 0x54, 0x45, 0x4e, 0x54, 0x10, 0x02, 0x32, 0x3e, 0x0a, 0x03, 0x43, 0x4d, 0x53, 0x12, 0x37,
+	0x0a, 0x0b, 0x47, 0x65, 0x74, 0x41, 0x63, 0x74, 0x69, 0x76, 0x69, 0x74, 0x79, 0x12, 0x14, 0x2e,
+	0x43, 0x4d, 0x53, 0x2e, 0x41, 0x63, 0x74, 0x69, 0x76, 0x69, 0x74, 0x79, 0x52, 0x65, 0x71, 0x75,
+	0x65, 0x73, 0x74, 0x1a, 0x12, 0x2e, 0x43, 0x4d, 0x53, 0x2e, 0x41, 0x63, 0x74, 0x69, 0x76, 0x69,
+	0x74, 0x79, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x42, 0x4a, 0x0a, 0x15, 0x63, 0x6f, 0x6d, 0x2e, 0x65,
+	0x78, 0x61, 0x6d, 0x70, 0x6c, 0x65, 0x2e, 0x74, 0x65, 0x73, 0x74, 0x65, 0x5f, 0x61, 0x70, 0x70,
+	0x42, 0x0a, 0x41, 0x6e, 0x64, 0x72, 0x6f, 0x69, 0x64, 0x43, 0x4d, 0x53, 0x50, 0x01, 0x5a, 0x23,
+	0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x68, 0x6d, 0x61, 0x72, 0x74,
+	0x69, 0x6e, 0x73, 0x39, 0x38, 0x2f, 0x43, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x73, 0x2f,
+	0x43, 0x4d, 0x53, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -1100,48 +1304,55 @@ func file_github_com_hmartins98_Contracts_CMS_CMS_proto_rawDescGZIP() []byte {
 	return file_github_com_hmartins98_Contracts_CMS_CMS_proto_rawDescData
 }
 
-var file_github_com_hmartins98_Contracts_CMS_CMS_proto_enumTypes = make([]protoimpl.EnumInfo, 5)
-var file_github_com_hmartins98_Contracts_CMS_CMS_proto_msgTypes = make([]protoimpl.MessageInfo, 10)
+var file_github_com_hmartins98_Contracts_CMS_CMS_proto_enumTypes = make([]protoimpl.EnumInfo, 6)
+var file_github_com_hmartins98_Contracts_CMS_CMS_proto_msgTypes = make([]protoimpl.MessageInfo, 12)
 var file_github_com_hmartins98_Contracts_CMS_CMS_proto_goTypes = []interface{}{
 	(InteractionType)(0),              // 0: CMS.InteractionType
-	(Gravity)(0),                      // 1: CMS.Gravity
-	(ScaleType)(0),                    // 2: CMS.ScaleType
-	(Orientation)(0),                  // 3: CMS.Orientation
-	(LayoutSize)(0),                   // 4: CMS.LayoutSize
-	(*ActivityRequest)(nil),           // 5: CMS.ActivityRequest
-	(*ActivityReply)(nil),             // 6: CMS.ActivityReply
-	(*ViewProperties)(nil),            // 7: CMS.ViewProperties
-	(*LinearLayoutProperties)(nil),    // 8: CMS.LinearLayoutProperties
-	(*ImageProperties)(nil),           // 9: CMS.ImageProperties
-	(*TextProperties)(nil),            // 10: CMS.TextProperties
-	(*ButtonProperties)(nil),          // 11: CMS.ButtonProperties
-	(*ChangeActivityInteraction)(nil), // 12: CMS.ChangeActivityInteraction
-	(*RecyclerViewInteraction)(nil),   // 13: CMS.RecyclerViewInteraction
-	(*SubmitInteraction)(nil),         // 14: CMS.SubmitInteraction
-	(*any.Any)(nil),                   // 15: google.protobuf.Any
+	(InputTextType)(0),                // 1: CMS.InputTextType
+	(Gravity)(0),                      // 2: CMS.Gravity
+	(ScaleType)(0),                    // 3: CMS.ScaleType
+	(Orientation)(0),                  // 4: CMS.Orientation
+	(LayoutSize)(0),                   // 5: CMS.LayoutSize
+	(*ActivityRequest)(nil),           // 6: CMS.ActivityRequest
+	(*ActivityReply)(nil),             // 7: CMS.ActivityReply
+	(*ViewProperties)(nil),            // 8: CMS.ViewProperties
+	(*LinearLayoutProperties)(nil),    // 9: CMS.LinearLayoutProperties
+	(*ImageProperties)(nil),           // 10: CMS.ImageProperties
+	(*TextProperties)(nil),            // 11: CMS.TextProperties
+	(*ButtonProperties)(nil),          // 12: CMS.ButtonProperties
+	(*ChangeActivityInteraction)(nil), // 13: CMS.ChangeActivityInteraction
+	(*RecyclerViewInteraction)(nil),   // 14: CMS.RecyclerViewInteraction
+	(*SubmitInteraction)(nil),         // 15: CMS.SubmitInteraction
+	(*RecyclerViewProperties)(nil),    // 16: CMS.RecyclerViewProperties
+	(*TextInputProperties)(nil),       // 17: CMS.TextInputProperties
+	(*any.Any)(nil),                   // 18: google.protobuf.Any
 }
 var file_github_com_hmartins98_Contracts_CMS_CMS_proto_depIdxs = []int32{
-	15, // 0: CMS.ActivityReply.activity:type_name -> google.protobuf.Any
-	1,  // 1: CMS.ViewProperties.gravity:type_name -> CMS.Gravity
-	4,  // 2: CMS.ViewProperties.layout_height_type:type_name -> CMS.LayoutSize
-	4,  // 3: CMS.ViewProperties.layout_width_type:type_name -> CMS.LayoutSize
-	7,  // 4: CMS.LinearLayoutProperties.view:type_name -> CMS.ViewProperties
-	3,  // 5: CMS.LinearLayoutProperties.orientation:type_name -> CMS.Orientation
-	7,  // 6: CMS.ImageProperties.view:type_name -> CMS.ViewProperties
-	2,  // 7: CMS.ImageProperties.scale_type:type_name -> CMS.ScaleType
-	7,  // 8: CMS.TextProperties.view:type_name -> CMS.ViewProperties
-	7,  // 9: CMS.ButtonProperties.view:type_name -> CMS.ViewProperties
+	18, // 0: CMS.ActivityReply.activity:type_name -> google.protobuf.Any
+	2,  // 1: CMS.ViewProperties.gravity:type_name -> CMS.Gravity
+	5,  // 2: CMS.ViewProperties.layout_height_type:type_name -> CMS.LayoutSize
+	5,  // 3: CMS.ViewProperties.layout_width_type:type_name -> CMS.LayoutSize
+	8,  // 4: CMS.LinearLayoutProperties.view:type_name -> CMS.ViewProperties
+	4,  // 5: CMS.LinearLayoutProperties.orientation:type_name -> CMS.Orientation
+	8,  // 6: CMS.ImageProperties.view:type_name -> CMS.ViewProperties
+	3,  // 7: CMS.ImageProperties.scale_type:type_name -> CMS.ScaleType
+	8,  // 8: CMS.TextProperties.view:type_name -> CMS.ViewProperties
+	8,  // 9: CMS.ButtonProperties.view:type_name -> CMS.ViewProperties
 	0,  // 10: CMS.ButtonProperties.interaction_type:type_name -> CMS.InteractionType
-	12, // 11: CMS.ButtonProperties.change_activity_interaction:type_name -> CMS.ChangeActivityInteraction
-	13, // 12: CMS.ButtonProperties.recycler_view_interaction:type_name -> CMS.RecyclerViewInteraction
-	14, // 13: CMS.ButtonProperties.submit_interaction:type_name -> CMS.SubmitInteraction
-	5,  // 14: CMS.CMS.GetActivity:input_type -> CMS.ActivityRequest
-	6,  // 15: CMS.CMS.GetActivity:output_type -> CMS.ActivityReply
-	15, // [15:16] is the sub-list for method output_type
-	14, // [14:15] is the sub-list for method input_type
-	14, // [14:14] is the sub-list for extension type_name
-	14, // [14:14] is the sub-list for extension extendee
-	0,  // [0:14] is the sub-list for field type_name
+	13, // 11: CMS.ButtonProperties.change_activity_interaction:type_name -> CMS.ChangeActivityInteraction
+	14, // 12: CMS.ButtonProperties.recycler_view_interaction:type_name -> CMS.RecyclerViewInteraction
+	15, // 13: CMS.ButtonProperties.submit_interaction:type_name -> CMS.SubmitInteraction
+	8,  // 14: CMS.RecyclerViewProperties.view:type_name -> CMS.ViewProperties
+	4,  // 15: CMS.RecyclerViewProperties.orientation:type_name -> CMS.Orientation
+	8,  // 16: CMS.TextInputProperties.view:type_name -> CMS.ViewProperties
+	1,  // 17: CMS.TextInputProperties.inputType:type_name -> CMS.InputTextType
+	6,  // 18: CMS.CMS.GetActivity:input_type -> CMS.ActivityRequest
+	7,  // 19: CMS.CMS.GetActivity:output_type -> CMS.ActivityReply
+	19, // [19:20] is the sub-list for method output_type
+	18, // [18:19] is the sub-list for method input_type
+	18, // [18:18] is the sub-list for extension type_name
+	18, // [18:18] is the sub-list for extension extendee
+	0,  // [0:18] is the sub-list for field type_name
 }
 
 func init() { file_github_com_hmartins98_Contracts_CMS_CMS_proto_init() }
@@ -1270,14 +1481,38 @@ func file_github_com_hmartins98_Contracts_CMS_CMS_proto_init() {
 				return nil
 			}
 		}
+		file_github_com_hmartins98_Contracts_CMS_CMS_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*RecyclerViewProperties); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_github_com_hmartins98_Contracts_CMS_CMS_proto_msgTypes[11].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*TextInputProperties); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_github_com_hmartins98_Contracts_CMS_CMS_proto_rawDesc,
-			NumEnums:      5,
-			NumMessages:   10,
+			NumEnums:      6,
+			NumMessages:   12,
 			NumExtensions: 0,
 			NumServices:   1,
 		},

@@ -1,7 +1,9 @@
 syntax = "proto3";
 
 option go_package = "github.com/hmartins98/Contracts/CMS";
+option java_package = "com.example.teste_app";
 option java_outer_classname = "AndroidCMS";
+option java_multiple_files = true;
 
 package CMS;
 
@@ -82,6 +84,24 @@ message RecyclerViewInteraction{
 
 message SubmitInteraction{
   int32 form_id = 1;
+}
+
+message RecyclerViewProperties{
+  ViewProperties view = 1;
+  bool hasFixedSize = 2;
+  Orientation orientation = 3;
+}
+
+message TextInputProperties{
+  ViewProperties view = 1;
+  string textHint = 2;
+  float textSize = 3;
+  InputTextType inputType = 4;
+}
+
+enum InputTextType{
+  EMAIL = 0;
+  PASSWORD = 1;
 }
 
 enum Gravity{
