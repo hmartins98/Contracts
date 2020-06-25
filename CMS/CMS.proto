@@ -97,6 +97,8 @@ message TextInputProperties{
   string textHint = 2;
   float textSize = 3;
   InputTextType inputType = 4;
+  bool required = 5;
+  string rules = 6;
 }
 
 enum InputTextType{
@@ -122,4 +124,9 @@ enum LayoutSize{
   VALUE = 0;
   MATCH_PARENT = 1;
   WRAP_CONTENT = 2;
+}
+
+message FormProperties{
+  ViewProperties view = 1;
+  Orientation orientation = 2;
 }
