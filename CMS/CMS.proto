@@ -99,6 +99,7 @@ message TextInputProperties{
   InputTextType inputType = 4;
   bool required = 5;
   string rules = 6;
+  string error_msg = 7;
 }
 
 enum InputTextType{
