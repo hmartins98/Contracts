@@ -126,8 +126,3 @@ enum LayoutSize{
   MATCH_PARENT = 1;
   WRAP_CONTENT = 2;
 }
-
-message FormProperties{
-  ViewProperties view = 1;
-  Orientation orientation = 2;
-}
