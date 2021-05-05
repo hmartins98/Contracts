@@ -96,12 +96,13 @@ message RecyclerViewProperties{
 
 message TextInputProperties{
   ViewProperties view = 1;
-  string textHint = 2;
-  float textSize = 3;
-  InputTextType inputType = 4;
-  bool required = 5;
-  string rules = 6;
-  string error_msg = 7;
+  string fieldName = 2;
+  string textHint = 3;
+  float textSize = 4;
+  InputTextType inputType = 5;
+  bool required = 6;
+  string rules = 7;
+  string error_msg = 8;
 }
 
 enum InputTextType{
