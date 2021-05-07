@@ -41,6 +41,7 @@ message ViewProperties{
 message LinearLayoutProperties{
   ViewProperties view = 1;
   Orientation orientation = 2;
+  string background_uri = 3;
 }
 
 message ImageProperties {
