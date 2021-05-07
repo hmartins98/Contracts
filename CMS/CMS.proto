@@ -52,6 +52,10 @@ message ImageProperties {
 message TextProperties {
   ViewProperties view = 1;
   string text = 2;
+	string color = 3;
+  SizeUnit sizeUnit = 4;
+	float	size = 5;
+  TextStyle textStyle = 6;
 }
 
 message ButtonProperties {
@@ -112,6 +116,7 @@ enum InputTextType{
 
 enum Gravity{
   TOP = 0;
+  CENTER = 1;
 }
 
 enum ScaleType{
@@ -128,4 +133,12 @@ enum LayoutSize{
   VALUE = 0;
   MATCH_PARENT = 1;
   WRAP_CONTENT = 2;
+}
+
+enum SizeUnit{
+  SP = 0;
+}
+
+enum TextStyle{
+  bold = 0;
 }
