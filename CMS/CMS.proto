@@ -131,6 +131,7 @@ enum InputTextType{
 enum Gravity{
   TOP = 0;
   CENTER = 1;
+  CENTER_HORIZONTAL = 2;
 }
 
 enum ScaleType{
