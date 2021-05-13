@@ -42,6 +42,19 @@ message LinearLayoutProperties{
   ViewProperties view = 1;
   Orientation orientation = 2;
   string background_uri = 3;
+  ActionType action_type = 7;
+  ChangeActivityAction change_activity_action = 8;
+}
+
+enum ActionType{
+  NONE = 0;
+  CHANGE_ACTIVITY_Action = 1;
+}
+
+message ChangeActivityAction{
+  int32 next_activity_id = 1;
+  bool invalidate_cache = 2;
+  float timeout = 3;
 }
 
 message ImageProperties {
