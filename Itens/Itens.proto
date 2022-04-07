@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+option go_package = "Contracts/Items";
+
+package ItemsPackage;
+
+import "github.com/hmartins98/Contracts/CustomTypes/CustomTypes.proto";
+
+service ItemsContract {
+  rpc CreateItems (Items) returns (Items);
+  rpc ReadItems (ItemsId) returns (Items);
+  rpc UpdateItems (Items) returns (BOOL);
+  rpc DeleteItems (ItemsId) returns (BOOL);
+}
+
+message Items {
+  GUID id = 1;
+  string name = 2;
+  int32 type_id = 4;
+  float price = 5;
+  string description = 6;
+  float review_score = 7;
+}
+
+message ItemsId {
+  GUID id = 1;
+}
