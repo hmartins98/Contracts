@@ -7,10 +7,10 @@ package ItemsPackage;
 import "github.com/hmartins98/Contracts/CustomTypes/CustomTypes.proto";
 
 service ItemsContract {
-  rpc CreateItems (Items) returns (Items);
+  rpc CreateItems (Items) returns (bool);
   rpc ReadItems (ItemsId) returns (Items);
-  rpc UpdateItems (Items) returns (BOOL);
-  rpc DeleteItems (ItemsId) returns (BOOL);
+  rpc UpdateItems (Items) returns (bool);
+  rpc DeleteItems (ItemsId) returns (bool);
 }
 
 message Items {
