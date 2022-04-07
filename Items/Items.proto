@@ -8,7 +8,7 @@ import "github.com/hmartins98/Contracts/CustomTypes/CustomTypes.proto";
 
 service ItemsContract {
   rpc CreateItems (Items) returns (bool);
-  rpc ReadItems (ItemsId) returns (Items);
+  rpc ReadItems (ItemsId) returns (bool);
   rpc UpdateItems (Items) returns (bool);
   rpc DeleteItems (ItemsId) returns (bool);
 }
