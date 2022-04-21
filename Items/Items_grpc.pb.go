@@ -23,10 +23,10 @@ const _ = grpc.SupportPackageIsVersion7
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type ItemsContractClient interface {
-	CreateItems(ctx context.Context, in *Items, opts ...grpc.CallOption) (*CustomTypes.BOOL, error)
-	ReadItems(ctx context.Context, in *ItemsId, opts ...grpc.CallOption) (*CustomTypes.BOOL, error)
-	UpdateItems(ctx context.Context, in *Items, opts ...grpc.CallOption) (*CustomTypes.BOOL, error)
-	DeleteItems(ctx context.Context, in *ItemsId, opts ...grpc.CallOption) (*CustomTypes.BOOL, error)
+	CreateItem(ctx context.Context, in *Item, opts ...grpc.CallOption) (*CustomTypes.BOOL, error)
+	ReadItem(ctx context.Context, in *ItemId, opts ...grpc.CallOption) (*CustomTypes.BOOL, error)
+	UpdateItem(ctx context.Context, in *Item, opts ...grpc.CallOption) (*CustomTypes.BOOL, error)
+	DeleteItem(ctx context.Context, in *ItemId, opts ...grpc.CallOption) (*CustomTypes.BOOL, error)
 }
 
 type itemsContractClient struct {
@@ -37,36 +37,36 @@ func NewItemsContractClient(cc grpc.ClientConnInterface) ItemsContractClient {
 	return &itemsContractClient{cc}
 }
 
-func (c *itemsContractClient) CreateItems(ctx context.Context, in *Items, opts ...grpc.CallOption) (*CustomTypes.BOOL, error) {
+func (c *itemsContractClient) CreateItem(ctx context.Context, in *Item, opts ...grpc.CallOption) (*CustomTypes.BOOL, error) {
 	out := new(CustomTypes.BOOL)
-	err := c.cc.Invoke(ctx, "/ItemsPackage.ItemsContract/CreateItems", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/ItemsPackage.ItemsContract/CreateItem", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *itemsContractClient) ReadItems(ctx context.Context, in *ItemsId, opts ...grpc.CallOption) (*CustomTypes.BOOL, error) {
+func (c *itemsContractClient) ReadItem(ctx context.Context, in *ItemId, opts ...grpc.CallOption) (*CustomTypes.BOOL, error) {
 	out := new(CustomTypes.BOOL)
-	err := c.cc.Invoke(ctx, "/ItemsPackage.ItemsContract/ReadItems", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/ItemsPackage.ItemsContract/ReadItem", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *itemsContractClient) UpdateItems(ctx context.Context, in *Items, opts ...grpc.CallOption) (*CustomTypes.BOOL, error) {
+func (c *itemsContractClient) UpdateItem(ctx context.Context, in *Item, opts ...grpc.CallOption) (*CustomTypes.BOOL, error) {
 	out := new(CustomTypes.BOOL)
-	err := c.cc.Invoke(ctx, "/ItemsPackage.ItemsContract/UpdateItems", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/ItemsPackage.ItemsContract/UpdateItem", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *itemsContractClient) DeleteItems(ctx context.Context, in *ItemsId, opts ...grpc.CallOption) (*CustomTypes.BOOL, error) {
+func (c *itemsContractClient) DeleteItem(ctx context.Context, in *ItemId, opts ...grpc.CallOption) (*CustomTypes.BOOL, error) {
 	out := new(CustomTypes.BOOL)
-	err := c.cc.Invoke(ctx, "/ItemsPackage.ItemsContract/DeleteItems", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/ItemsPackage.ItemsContract/DeleteItem", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -77,10 +77,10 @@ func (c *itemsContractClient) DeleteItems(ctx context.Context, in *ItemsId, opts
 // All implementations must embed UnimplementedItemsContractServer
 // for forward compatibility
 type ItemsContractServer interface {
-	CreateItems(context.Context, *Items) (*CustomTypes.BOOL, error)
-	ReadItems(context.Context, *ItemsId) (*CustomTypes.BOOL, error)
-	UpdateItems(context.Context, *Items) (*CustomTypes.BOOL, error)
-	DeleteItems(context.Context, *ItemsId) (*CustomTypes.BOOL, error)
+	CreateItem(context.Context, *Item) (*CustomTypes.BOOL, error)
+	ReadItem(context.Context, *ItemId) (*CustomTypes.BOOL, error)
+	UpdateItem(context.Context, *Item) (*CustomTypes.BOOL, error)
+	DeleteItem(context.Context, *ItemId) (*CustomTypes.BOOL, error)
 	mustEmbedUnimplementedItemsContractServer()
 }
 
@@ -88,17 +88,17 @@ type ItemsContractServer interface {
 type UnimplementedItemsContractServer struct {
 }
 
-func (UnimplementedItemsContractServer) CreateItems(context.Context, *Items) (*CustomTypes.BOOL, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method CreateItems not implemented")
+func (UnimplementedItemsContractServer) CreateItem(context.Context, *Item) (*CustomTypes.BOOL, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CreateItem not implemented")
 }
-func (UnimplementedItemsContractServer) ReadItems(context.Context, *ItemsId) (*CustomTypes.BOOL, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method ReadItems not implemented")
+func (UnimplementedItemsContractServer) ReadItem(context.Context, *ItemId) (*CustomTypes.BOOL, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ReadItem not implemented")
 }
-func (UnimplementedItemsContractServer) UpdateItems(context.Context, *Items) (*CustomTypes.BOOL, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method UpdateItems not implemented")
+func (UnimplementedItemsContractServer) UpdateItem(context.Context, *Item) (*CustomTypes.BOOL, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method UpdateItem not implemented")
 }
-func (UnimplementedItemsContractServer) DeleteItems(context.Context, *ItemsId) (*CustomTypes.BOOL, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method DeleteItems not implemented")
+func (UnimplementedItemsContractServer) DeleteItem(context.Context, *ItemId) (*CustomTypes.BOOL, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method DeleteItem not implemented")
 }
 func (UnimplementedItemsContractServer) mustEmbedUnimplementedItemsContractServer() {}
 
@@ -113,74 +113,74 @@ func RegisterItemsContractServer(s grpc.ServiceRegistrar, srv ItemsContractServe
 	s.RegisterService(&ItemsContract_ServiceDesc, srv)
 }
 
-func _ItemsContract_CreateItems_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(Items)
+func _ItemsContract_CreateItem_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(Item)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(ItemsContractServer).CreateItems(ctx, in)
+		return srv.(ItemsContractServer).CreateItem(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/ItemsPackage.ItemsContract/CreateItems",
+		FullMethod: "/ItemsPackage.ItemsContract/CreateItem",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ItemsContractServer).CreateItems(ctx, req.(*Items))
+		return srv.(ItemsContractServer).CreateItem(ctx, req.(*Item))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ItemsContract_ReadItems_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(ItemsId)
+func _ItemsContract_ReadItem_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ItemId)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(ItemsContractServer).ReadItems(ctx, in)
+		return srv.(ItemsContractServer).ReadItem(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/ItemsPackage.ItemsContract/ReadItems",
+		FullMethod: "/ItemsPackage.ItemsContract/ReadItem",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ItemsContractServer).ReadItems(ctx, req.(*ItemsId))
+		return srv.(ItemsContractServer).ReadItem(ctx, req.(*ItemId))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ItemsContract_UpdateItems_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(Items)
+func _ItemsContract_UpdateItem_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(Item)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(ItemsContractServer).UpdateItems(ctx, in)
+		return srv.(ItemsContractServer).UpdateItem(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/ItemsPackage.ItemsContract/UpdateItems",
+		FullMethod: "/ItemsPackage.ItemsContract/UpdateItem",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ItemsContractServer).UpdateItems(ctx, req.(*Items))
+		return srv.(ItemsContractServer).UpdateItem(ctx, req.(*Item))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ItemsContract_DeleteItems_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(ItemsId)
+func _ItemsContract_DeleteItem_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ItemId)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(ItemsContractServer).DeleteItems(ctx, in)
+		return srv.(ItemsContractServer).DeleteItem(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/ItemsPackage.ItemsContract/DeleteItems",
+		FullMethod: "/ItemsPackage.ItemsContract/DeleteItem",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ItemsContractServer).DeleteItems(ctx, req.(*ItemsId))
+		return srv.(ItemsContractServer).DeleteItem(ctx, req.(*ItemId))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -193,20 +193,20 @@ var ItemsContract_ServiceDesc = grpc.ServiceDesc{
 	HandlerType: (*ItemsContractServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
-			MethodName: "CreateItems",
-			Handler:    _ItemsContract_CreateItems_Handler,
+			MethodName: "CreateItem",
+			Handler:    _ItemsContract_CreateItem_Handler,
 		},
 		{
-			MethodName: "ReadItems",
-			Handler:    _ItemsContract_ReadItems_Handler,
+			MethodName: "ReadItem",
+			Handler:    _ItemsContract_ReadItem_Handler,
 		},
 		{
-			MethodName: "UpdateItems",
-			Handler:    _ItemsContract_UpdateItems_Handler,
+			MethodName: "UpdateItem",
+			Handler:    _ItemsContract_UpdateItem_Handler,
 		},
 		{
-			MethodName: "DeleteItems",
-			Handler:    _ItemsContract_DeleteItems_Handler,
+			MethodName: "DeleteItem",
+			Handler:    _ItemsContract_DeleteItem_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
