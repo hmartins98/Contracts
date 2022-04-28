@@ -8,7 +8,7 @@ import "github.com/hmartins98/Contracts/CustomTypes/CustomTypes.proto";
 
 service ProductsContract {
   rpc CreateProduct (Product) returns (BOOL);
-  rpc ReadProduct (ProductId) returns (BOOL);
+  rpc ReadProduct (ProductId) returns (Product);
   rpc UpdateProduct (Product) returns (BOOL);
   rpc DeleteProduct (ProductId) returns (BOOL);
 }

@@ -24,7 +24,7 @@ const _ = grpc.SupportPackageIsVersion7
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type ProductsContractClient interface {
 	CreateProduct(ctx context.Context, in *Product, opts ...grpc.CallOption) (*CustomTypes.BOOL, error)
-	ReadProduct(ctx context.Context, in *ProductId, opts ...grpc.CallOption) (*CustomTypes.BOOL, error)
+	ReadProduct(ctx context.Context, in *ProductId, opts ...grpc.CallOption) (*Product, error)
 	UpdateProduct(ctx context.Context, in *Product, opts ...grpc.CallOption) (*CustomTypes.BOOL, error)
 	DeleteProduct(ctx context.Context, in *ProductId, opts ...grpc.CallOption) (*CustomTypes.BOOL, error)
 }
@@ -46,8 +46,8 @@ func (c *productsContractClient) CreateProduct(ctx context.Context, in *Product,
 	return out, nil
 }
 
-func (c *productsContractClient) ReadProduct(ctx context.Context, in *ProductId, opts ...grpc.CallOption) (*CustomTypes.BOOL, error) {
-	out := new(CustomTypes.BOOL)
+func (c *productsContractClient) ReadProduct(ctx context.Context, in *ProductId, opts ...grpc.CallOption) (*Product, error) {
+	out := new(Product)
 	err := c.cc.Invoke(ctx, "/ProductsPackage.ProductsContract/ReadProduct", in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -78,7 +78,7 @@ func (c *productsContractClient) DeleteProduct(ctx context.Context, in *ProductI
 // for forward compatibility
 type ProductsContractServer interface {
 	CreateProduct(context.Context, *Product) (*CustomTypes.BOOL, error)
-	ReadProduct(context.Context, *ProductId) (*CustomTypes.BOOL, error)
+	ReadProduct(context.Context, *ProductId) (*Product, error)
 	UpdateProduct(context.Context, *Product) (*CustomTypes.BOOL, error)
 	DeleteProduct(context.Context, *ProductId) (*CustomTypes.BOOL, error)
 	mustEmbedUnimplementedProductsContractServer()
@@ -91,7 +91,7 @@ type UnimplementedProductsContractServer struct {
 func (UnimplementedProductsContractServer) CreateProduct(context.Context, *Product) (*CustomTypes.BOOL, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CreateProduct not implemented")
 }
-func (UnimplementedProductsContractServer) ReadProduct(context.Context, *ProductId) (*CustomTypes.BOOL, error) {
+func (UnimplementedProductsContractServer) ReadProduct(context.Context, *ProductId) (*Product, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ReadProduct not implemented")
 }
 func (UnimplementedProductsContractServer) UpdateProduct(context.Context, *Product) (*CustomTypes.BOOL, error) {
