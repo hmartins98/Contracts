@@ -17,9 +17,9 @@ message Product {
   int64 id = 1;
   string name = 2;
   int64 type_id = 4;
-  float price = 5;
+  double price = 5;
   string description = 6;
-  float review_score = 7;
+  double review_score = 7;
 }
 
 message ProductId {
