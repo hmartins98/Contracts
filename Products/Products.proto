@@ -4,13 +4,13 @@ option go_package = "Contracts/Products";
 
 package ProductsPackage;
 
-import "github.com/hmartins98/Contracts/CustomTypes/CustomTypes.proto";
+import "google/protobuf/empty.proto";
 
 service ProductsContract {
-  rpc CreateProduct (Product) returns (BOOL);
+  rpc CreateProduct (Product) returns (google.protobuf.Empty);
   rpc ReadProduct (ProductId) returns (Product);
-  rpc UpdateProduct (Product) returns (BOOL);
-  rpc DeleteProduct (ProductId) returns (BOOL);
+  rpc UpdateProduct (Product) returns (google.protobuf.Empty);
+  rpc DeleteProduct (ProductId) returns (google.protobuf.Empty);
 }
 
 message Product {
