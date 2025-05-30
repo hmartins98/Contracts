@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.36.6
 // 	protoc        v3.21.12
-// source: Contracts/Products/Products.proto
+// source: Products/Products.proto
 
 package Products
 
@@ -36,7 +36,7 @@ type Product struct {
 
 func (x *Product) Reset() {
 	*x = Product{}
-	mi := &file_Contracts_Products_Products_proto_msgTypes[0]
+	mi := &file_Products_Products_proto_msgTypes[0]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -48,7 +48,7 @@ func (x *Product) String() string {
 func (*Product) ProtoMessage() {}
 
 func (x *Product) ProtoReflect() protoreflect.Message {
-	mi := &file_Contracts_Products_Products_proto_msgTypes[0]
+	mi := &file_Products_Products_proto_msgTypes[0]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -61,7 +61,7 @@ func (x *Product) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Product.ProtoReflect.Descriptor instead.
 func (*Product) Descriptor() ([]byte, []int) {
-	return file_Contracts_Products_Products_proto_rawDescGZIP(), []int{0}
+	return file_Products_Products_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *Product) GetId() int64 {
@@ -115,7 +115,7 @@ type ProductId struct {
 
 func (x *ProductId) Reset() {
 	*x = ProductId{}
-	mi := &file_Contracts_Products_Products_proto_msgTypes[1]
+	mi := &file_Products_Products_proto_msgTypes[1]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -127,7 +127,7 @@ func (x *ProductId) String() string {
 func (*ProductId) ProtoMessage() {}
 
 func (x *ProductId) ProtoReflect() protoreflect.Message {
-	mi := &file_Contracts_Products_Products_proto_msgTypes[1]
+	mi := &file_Products_Products_proto_msgTypes[1]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -140,7 +140,7 @@ func (x *ProductId) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ProductId.ProtoReflect.Descriptor instead.
 func (*ProductId) Descriptor() ([]byte, []int) {
-	return file_Contracts_Products_Products_proto_rawDescGZIP(), []int{1}
+	return file_Products_Products_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *ProductId) GetId() int64 {
@@ -150,11 +150,11 @@ func (x *ProductId) GetId() int64 {
 	return 0
 }
 
-var File_Contracts_Products_Products_proto protoreflect.FileDescriptor
+var File_Products_Products_proto protoreflect.FileDescriptor
 
-const file_Contracts_Products_Products_proto_rawDesc = "" +
+const file_Products_Products_proto_rawDesc = "" +
 	"\n" +
-	"!Contracts/Products/Products.proto\x12\x0fProductsPackage\x1a\x1bgoogle/protobuf/empty.proto\"\xa1\x01\n" +
+	"\x17Products/Products.proto\x12\x0fProductsPackage\x1a\x1bgoogle/protobuf/empty.proto\"\xa1\x01\n" +
 	"\aProduct\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\x03R\x02id\x12\x12\n" +
 	"\x04name\x18\x02 \x01(\tR\x04name\x12\x17\n" +
@@ -171,24 +171,24 @@ const file_Contracts_Products_Products_proto_rawDesc = "" +
 	"\rDeleteProduct\x12\x1a.ProductsPackage.ProductId\x1a\x16.google.protobuf.EmptyB\x14Z\x12Contracts/Productsb\x06proto3"
 
 var (
-	file_Contracts_Products_Products_proto_rawDescOnce sync.Once
-	file_Contracts_Products_Products_proto_rawDescData []byte
+	file_Products_Products_proto_rawDescOnce sync.Once
+	file_Products_Products_proto_rawDescData []byte
 )
 
-func file_Contracts_Products_Products_proto_rawDescGZIP() []byte {
-	file_Contracts_Products_Products_proto_rawDescOnce.Do(func() {
-		file_Contracts_Products_Products_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_Contracts_Products_Products_proto_rawDesc), len(file_Contracts_Products_Products_proto_rawDesc)))
+func file_Products_Products_proto_rawDescGZIP() []byte {
+	file_Products_Products_proto_rawDescOnce.Do(func() {
+		file_Products_Products_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_Products_Products_proto_rawDesc), len(file_Products_Products_proto_rawDesc)))
 	})
-	return file_Contracts_Products_Products_proto_rawDescData
+	return file_Products_Products_proto_rawDescData
 }
 
-var file_Contracts_Products_Products_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
-var file_Contracts_Products_Products_proto_goTypes = []any{
+var file_Products_Products_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
+var file_Products_Products_proto_goTypes = []any{
 	(*Product)(nil),       // 0: ProductsPackage.Product
 	(*ProductId)(nil),     // 1: ProductsPackage.ProductId
 	(*emptypb.Empty)(nil), // 2: google.protobuf.Empty
 }
-var file_Contracts_Products_Products_proto_depIdxs = []int32{
+var file_Products_Products_proto_depIdxs = []int32{
 	0, // 0: ProductsPackage.ProductsContract.CreateProduct:input_type -> ProductsPackage.Product
 	1, // 1: ProductsPackage.ProductsContract.ReadProduct:input_type -> ProductsPackage.ProductId
 	0, // 2: ProductsPackage.ProductsContract.UpdateProduct:input_type -> ProductsPackage.Product
@@ -204,26 +204,26 @@ var file_Contracts_Products_Products_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for field type_name
 }
 
-func init() { file_Contracts_Products_Products_proto_init() }
-func file_Contracts_Products_Products_proto_init() {
-	if File_Contracts_Products_Products_proto != nil {
+func init() { file_Products_Products_proto_init() }
+func file_Products_Products_proto_init() {
+	if File_Products_Products_proto != nil {
 		return
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: unsafe.Slice(unsafe.StringData(file_Contracts_Products_Products_proto_rawDesc), len(file_Contracts_Products_Products_proto_rawDesc)),
+			RawDescriptor: unsafe.Slice(unsafe.StringData(file_Products_Products_proto_rawDesc), len(file_Products_Products_proto_rawDesc)),
 			NumEnums:      0,
 			NumMessages:   2,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
-		GoTypes:           file_Contracts_Products_Products_proto_goTypes,
-		DependencyIndexes: file_Contracts_Products_Products_proto_depIdxs,
-		MessageInfos:      file_Contracts_Products_Products_proto_msgTypes,
+		GoTypes:           file_Products_Products_proto_goTypes,
+		DependencyIndexes: file_Products_Products_proto_depIdxs,
+		MessageInfos:      file_Products_Products_proto_msgTypes,
 	}.Build()
-	File_Contracts_Products_Products_proto = out.File
-	file_Contracts_Products_Products_proto_goTypes = nil
-	file_Contracts_Products_Products_proto_depIdxs = nil
+	File_Products_Products_proto = out.File
+	file_Products_Products_proto_goTypes = nil
+	file_Products_Products_proto_depIdxs = nil
 }
